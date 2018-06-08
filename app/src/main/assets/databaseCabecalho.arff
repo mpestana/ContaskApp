@@ -1,0 +1,7 @@
+@relation databaseUFBA
+
+@attribute lat numeric
+@attribute long numeric
+@attribute region {RU,IM,PAFI,Biologia,RestauranteBiologia,Biblioteca,Restaurante,Portaria,Estacionamento}
+
+@data

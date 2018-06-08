@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="270dp"
+    android:gravity="center">
+
+    <TextView
+        android:text="There is no tasks available now."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/taskText" />
+
+    <RadioGroup
+        android:id="@+id/radioSex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/taskText"
+        android:visibility="invisible">
+
+        <RadioButton
+            android:text="Yes"
+            style="@style/AppTheme.PopupOverlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/taskText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="37dp"
+            android:id="@+id/radioButton" />
+
+        <RadioButton
+            android:text="No"
+            style="@style/AppTheme.PopupOverlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioButton"
+            android:layout_alignLeft="@+id/radioButton"
+            android:layout_alignStart="@+id/radioButton"
+            android:id="@+id/radioButton2" />
+
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutNivel"
+        android:layout_width="185dp"
+        android:layout_height="250dp"
+        android:layout_below="@id/taskText"
+        android:layout_marginTop="37dp"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/text_view_progress_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Nível" >
+        </TextView>
+
+        <SeekBar
+            android:id="@+id/seekBarID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="20dp"
+            android:max="5" >
+        </SeekBar>
+
+        <TextView
+            android:id="@+id/initialvaluetextID"
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:layout_below="@+id/seekBarID"
+            android:text="0" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/finalvaluetextID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/seekBarID"
+            android:text="5" />
+
+    </RelativeLayout>
+
+    <Button
+        android:text="Send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/send_task"
+        android:layout_below="@+id/relativeLayoutNivel"/>
+
+</RelativeLayout>
